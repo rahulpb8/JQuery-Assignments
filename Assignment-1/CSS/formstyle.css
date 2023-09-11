@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-container{
+    background-color: blanchedalmond;
+    padding: 30px;
+    border-radius: 5px;
+}
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control small {
+    color: #e74c3c;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+h1{
+    margin-bottom: 30px;
+    font-size: 50px;
+    color: #e74c3c;
+}

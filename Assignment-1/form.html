@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="CSS/formstyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Form Validation</h1>
+            <form id="personal-form">
+                <div class="form-control">
+                    <p><label for="name">Name: </label></p>
+                    <input type="text" id="name" size="29" placeholder="Enter your name">
+                    <small id="error-name" class="error">Name should not be empty</small>
+                </div>
+                
+                <div class="form-control">
+                    <p><label for="address">Address: </label></p>
+                    <textarea name="address" id="address" cols="30" rows="4" placeholder="Enter your address here"></textarea>
+                    <small id="error-address" class="error">Address should not be empty</small>
+                </div>
+                
+                <div class="form-control">
+                    <label for="dob">Date of birth:</label>
+                    <input type="date" id="dob" min="1980-01-01" max="2004-01-01">
+                    <small id="error-dob" class="error">Please select your date of birth</small>
+                </div>
+
+                <div class="form-control">
+                    <label for="age">Age:</label>
+                    <select name="age" id="age">
+                        <option value="none" selected disabled hidden>Select age</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                    </select>
+                    <small id="error-age" class="error">Age is not selected..</small>
+                </div>
+
+                <div class="form-control">
+                    <label for="gender">Gender</label>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="HTML">Male</label>
+                    <input type="radio" id="female" name="gender" value="Famale">
+                    <label for="HTML">Famale</label>
+                    <input type="radio" id="other" name="gender" value="Other">
+                    <label for="HTML">Other</label>
+                    <small id="error-gender" class="error">Gender should not be empty</small>
+                </div>
+
+                <div class="form-control">
+                    <input type="checkbox" id="agree">
+                    <label for="agree">Agree to terms & conditions</label>
+                    <small id="error-terms"class="error">Agree the terms & conditions to continue</small>
+                </div>
+
+                <input type="submit">
+                
+            </form>
+        </div>
+    </div>
+    <script src="JS/form.js"></script>
+</body>
+</html>

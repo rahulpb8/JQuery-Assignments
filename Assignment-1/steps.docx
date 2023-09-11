@@ -1,0 +1,14 @@
+1.Created structure for form in html
+2.Added styles and properties for html form elements
+3.Added jquery cdn in the html file
+4.Created js file
+5.Created $(document).ready(function)
+6.Created an event on submit using jquery.
+7.Added preventdefault to that event.
+8.Selected all form elements and stored its value to appropriate variables.
+9.Valiadating each input with if and else conditions
+10.If the error condition is true, the error message inside the small tag will show, used jquery selector for selecting the 
+   error-message small tag and given show() to it.
+11.Given the error message class hidden using jquery and hide() initially, so when the condition occured only it will show the error.
+12.Given two error conditions for name input field which is when it is empty and when it contains only number.
+13.All fields will show an error message if it is empty.
