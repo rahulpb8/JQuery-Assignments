@@ -27,7 +27,7 @@ h1{
 .image{
     display: none;
 }
-.active{
+.active-image{
     display: block;
 }
 .action{
@@ -68,6 +68,7 @@ a{
     height: 10px;
     background: rgba(255, 255, 255, 0.3);
     margin: 0 12px;
+    cursor: pointer;
 }
 .active-bullet{
     background: rgba(255, 255, 255, 0.75);
