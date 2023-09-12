@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.slider{
+    max-width: 700px;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+h1{
+    font-size: 50px;
+    color: aqua;
+    margin: 15px 0px;
+    text-align: center;
+}
+.image{
+    display: none;
+}
+.active{
+    display: block;
+}
+.action{
+    position: absolute;
+    z-index: 1;
+}
+a{
+    width: 50px;
+    height: 50px;
+    color: white;
+    /* background-color: #000000; */
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.left{
+    left: 12px;
+}
+.right{
+    right: 12px;
+}
+.indicators{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+.slider-indicator{
+    border: 0;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0 12px;
+}
+.active-bullet{
+    background: rgba(255, 255, 255, 0.75);
+}
