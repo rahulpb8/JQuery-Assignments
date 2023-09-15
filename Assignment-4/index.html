@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="Images/apple.svg">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="JS/shoppingCart.js"></script>
+    <script src="https://kit.fontawesome.com/8432e54197.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo"><i class="fa-brands fa-apple fa-lg"></i>
+            <p class="logo">Apple</p>
+        </div>
+        <div><input type="search" placeholder="search" class="search"></div>
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count"></p></div>
+    </div>
+    <div class="container">
+        <div class="root">
+            
+            <div class="card">
+                <h1>iPhone 15 Pro Max</h1>
+                <img class="phoneImage" src="Images/15pro max.png" alt="Iphone 15pro max ">
+                <p>iPhone 15 Pro Max is equipped with an upgraded 5x Telephoto lens that uses a new tetraprism design.</p>
+                <div class="details">
+                    <div class="price">
+                        <span>₹</span><span class="value">159999</span>
+                    </div>
+                    <button class="addToCart" title="Add this product to your cart">Add To Cart</button>                
+                </div>
+            </div>
+            <div class="card">
+                <h1>iPhone 15 Pro</h1>
+                <img class="phoneImage" src="Images/15pro.png" alt="">
+                <p>iPhone 15 Pro is the first iPhone to feature an aerospace‑grade titanium design, using the same alloy that spacecraft use for missions to Mars.</p>
+                <div class="details">
+                    <div class="price">
+                        <span>₹</span><span class="value">129999</span>
+                    </div>
+                    <button class="addToCart" title="Add this product to your cart">Add To Cart</button>                
+                </div>
+            </div>
+            <div class="card">
+                <h1 class="name">iPhone 15 Plus</h1>
+                <img class="phoneImage" src="Images/15plus.png" alt="">
+                <p>The iPhone 15 Plus display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle.</p>
+                <div class="details">
+                    <div class="price">
+                        <span>₹</span><span class="value">89999</span>
+                    </div>
+                    <button class="addToCart" title="Add this product to your cart">Add To Cart</button>                
+                </div>
+            </div>
+            <div class="card">
+                <h1>iPhone 15</h1>
+                <img class="phoneImage" src="Images/15.png" alt="">
+                <p>The iPhone 15 is Apple's latest flagship smartphone, featuring cutting-edge technology and design. With its powerful A16 chip</p>
+                <div class="details">
+                    <div class="price">
+                        <span>₹</span><span class="value">79999</span>
+                    </div>
+                    <button class="addToCart" title="Add this product to your cart">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <h1>iPhone 14 Pro</h1>
+                <img class="phoneImage" src="Images/14pro.jpg" alt="">
+                <p>The iPhone 14 Pro is a premium smartphone from Apple, known for its high-end features and capabilities. It boasts a powerful A16 chip</p>
+                <div class="details">
+                    <div class="price">
+                        <span>₹</span><span class="value">119999</span>
+                    </div>
+                    <button class="addToCart" title="Add this product to your cart">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <h1>iPhone 14 Plus</h1>
+                <img class="phoneImage" src="Images/14plus.png" alt="">
+                <p>The iPhone 14 Plus display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle.</p>
+                <div class="details">
+                    <div class="price">
+                        <span>₹</span><span class="value">79999</span>
+                    </div>
+                    <button class="addToCart" title="Add this product to your cart">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <h1>iPhone 14</h1>
+                <img class="phoneImage" src="Images/14.png" alt="">
+                <p>The iPhone 14 6.06 inch display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle.</p>
+                <div class="details">
+                    <div class="price">
+                        <span>₹</span><span class="value">69999</span>
+                    </div>
+                    <button class="addToCart" title="Add this product to your cart">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <h1>iPhone 13</h1>
+                <img class="phoneImage" src="Images/13.png" alt="">
+                <p>iPhone 13 features a sleek and durable design, an advanced new dual-camera system for improved photos and videos, and introduces Cinematic mode.</p>
+                <div class="details">
+                    <div class="price">
+                        <span>₹</span><span class="value">59999</span>
+                    </div>
+                    <button class="addToCart" title="Add this product to your cart">Add To Cart</button>                
+                </div>
+            </div>
+            <div class="card">
+                <h1 class="name">iPhone 13 Mini</h1>
+                <img class="phoneImage" src="Images/13mini.jpg" alt="">
+                <p>The iPhone 13 mini is super combact device that comes with 5.42 inches display has rounded corners that follow a beautiful curved design</p>
+                <div class="details">
+                    <div class="price">
+                        <span>₹</span><span class="value">54999</span>
+                    </div>
+                    <button class="addToCart" title="Add this product to your cart">Add To Cart</button>                
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="head"><p>My Cart<i class="fa-solid fa2 fa-cart-shopping"></i></p></div>
+            <div class="cartItem"></div>
+            <!-- <div class="foot">
+                <h3>Total</h3>
+                <h2 id="total">$0.00</h2>
+            </div> -->
+            <button class="placeOrder" title="Place your order">Place Order</button>
+        </div>
+   </div> 
+</body>
+</html>
