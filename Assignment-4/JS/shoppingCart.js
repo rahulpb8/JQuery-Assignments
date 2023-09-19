@@ -3,7 +3,6 @@ $(document).ready(function(){
     let cart = [];
     let cartItem = $('.cartItem');
     let totalprice=0;
-    let price = 0;
 
     function addCart() {
         if(cart.length === '0'){
@@ -15,6 +14,23 @@ $(document).ready(function(){
             $('.itemCartDiv').text(cartItem.text());
         }
     }
+
+    function addPrice(itemPrice) {
+        totalprice += parseInt(itemPrice);
+        $('#total').text(totalprice);
+    }
+
+    function totalItem(){
+        let totalQuantity = 0
+        $('.itemCartDiv').each(function(){
+            let itemCount = $(this).find('.productCount').text();
+            itemCount = parseInt(itemCount);
+            totalQuantity += itemCount;
+            
+        }) 
+        $('#count').text(totalQuantity);
+    }
+    
     $('.addToCart').on('click', function() {
         let card = $(this).closest('.card');
         let itemName = card.find('h1').text();
@@ -26,7 +42,6 @@ $(document).ready(function(){
             cartCard.append(quantityControl);
 
             let price = card.find('.value').text();
-            // price = $(this).prev().children().eq(1).text();
             
             let btnMinus = $('<button class="btn-minus" type="button">-</button>');
             let productCount = $('<div class="productCount">1</div>');
@@ -43,14 +58,17 @@ $(document).ready(function(){
                     cart.pop(itemName);
                 }
                 addPrice(-price)
+                totalItem();
             })
 
             btnPlus.on('click', function(){
                 let count = $(this).prev().text();
                 $(this).prev().text(++count);
                 addPrice(price);
+                totalItem();
             })
-            addPrice(price);   
+            addPrice(price);  
+            totalItem(); 
         }
         else{
             let price = card.find('.value').text();
@@ -59,15 +77,12 @@ $(document).ready(function(){
             let count = parseInt(quantityControl.text()) + 1;
             quantityControl.text(count);
             addPrice(price)
+            totalItem();
         }
-        function addPrice(itemPrice) {
-            totalprice += parseInt(itemPrice);
-            $('#total').text(totalprice);
-        }
-        addCart();
-        
-    })
 
+        addCart();
+    })
+    
     $('.search').on('input', function () {
         let searchValue = $('.search').val().toLowerCase()
         $('.root').find('.card').each(function () {
@@ -83,8 +98,6 @@ $(document).ready(function(){
                     noItem.show()
                 }
             }
-            
         });
-    });
-    
+    });  
 });
