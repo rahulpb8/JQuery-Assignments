@@ -3,6 +3,7 @@ $(document).ready(function(){
     let cart = [];
     let cartItem = $('.cartItem');
     let totalprice=0;
+    let price = 0;
 
     function addCart() {
         if(cart.length === '0'){
@@ -24,7 +25,8 @@ $(document).ready(function(){
             let quantityControl = $('<div class="quantityControlDiv"></div>');
             cartCard.append(quantityControl);
 
-            // let price = card.find('.value').text();
+            let price = card.find('.value').text();
+            // price = $(this).prev().children().eq(1).text();
             
             let btnMinus = $('<button class="btn-minus" type="button">-</button>');
             let productCount = $('<div class="productCount">1</div>');
@@ -33,44 +35,34 @@ $(document).ready(function(){
             quantityControl.append(productCount);
             quantityControl.append(btnPlus);
 
-            
-
             btnMinus.on('click', function(){
-                count = $(this).next().text();
+                let count = $(this).next().text();
                 $(this).next().text(--count);
-                addPrice(-price);
                 if(count < 1){
                     $(this).parent().parent().remove();
                     cart.pop(itemName);
-                    addPrice(-price)
                 }
-               
+                addPrice(-price)
             })
 
             btnPlus.on('click', function(){
-                count = $(this).prev().text();
+                let count = $(this).prev().text();
                 $(this).prev().text(++count);
                 addPrice(price);
             })
-
-            let price = $(this).prev().children().eq(1).text();
-            // let count = 1;
-
-            function addPrice(itemPrice) {
-                itemPrice = parseInt(itemPrice);
-                totalprice += itemPrice;
-                $('#total').text(totalprice);
-            }
-            addPrice(price);
-
-            
+            addPrice(price);   
         }
         else{
+            let price = card.find('.value').text();
             let cartCard = $('.itemCartDiv:contains("'+itemName+'")');
             let quantityControl = cartCard.find('.productCount');
             let count = parseInt(quantityControl.text()) + 1;
             quantityControl.text(count);
             addPrice(price)
+        }
+        function addPrice(itemPrice) {
+            totalprice += parseInt(itemPrice);
+            $('#total').text(totalprice);
         }
         addCart();
         
@@ -86,7 +78,9 @@ $(document).ready(function(){
             } else {
                 $(this).hide();
                 if(!$('.root .card:visible')){
-                    alert('no result');
+                    let noItem = $('<div class="noItem">No Result Found</div>');
+                    $('.root').append(noItem);
+                    noItem.show()
                 }
             }
             
