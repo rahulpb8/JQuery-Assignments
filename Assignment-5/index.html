@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopprix</title>
+    <link rel="icon" href="Images/logo.png">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8432e54197.js" crossorigin="anonymous"></script>
+    <script src="JS/AjaxShoppingCart.js"></script>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo"><img src="Images/shopprix.svg" alt="">
+            
+        </div>
+        <div><input type="search" placeholder="search" class="search"></div>
+        <p style="color: white">Home</p>
+        <p style="color: white">About</p>
+        <p style="color: white">Contact Us</p>
+        <p style="color: white">Become a Seller</p>
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+    </div>
+    <div class="container">
+        <div class="categorizeBar">
+            <label for="sort">Sort Items : </label>
+            <select name="sort" id="sort">
+                <option value="sort">Sort By</option>
+                <option value="priceHightToLow">Price - High to Low</option>
+                <option value="priceLowToHigh">Price - Low to High</option>
+                <option value="ratings">Ratings</option>
+            </select>
+            <label for="filter">Filter Items : </label>
+            <select name="filter" id="filter">
+                <option value="filter" hidden>Category</option>
+                <option value="smartphones">Smartphones</option>
+                <option value="laptops">Laptops</option>
+                <option value="skincare">Skincare</option>
+                <option value="groceries">Groceries</option>
+                <option value="fragrances">Fragrances</option>
+                <option value="home-decoration">Home-decoration</option>
+            </select>
+        </div>
+        <div class="products">
+            <div class="images"></div>
+            
+        </div>
+    <div class="cartContainer">
+        <div class="sidebar">
+            <div class="head"><p>My Cart<i class="fa-solid fa2 fa-cart-shopping"></i></p></div>
+            <div class="cartItem"></div>
+            <div class="foot">
+                <h3>Total $ </h3>
+                <h2 id="total">0.00</h2>
+            </div>
+                <button class="placeOrder" title="Place your order">Place Order</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
